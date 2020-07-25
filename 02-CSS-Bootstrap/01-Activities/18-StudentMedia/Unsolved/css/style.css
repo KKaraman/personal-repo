@@ -68,4 +68,14 @@ body {
   .wrapper {
     width: 600px;
   }
+
+  #sidebar {
+    /* Positioning */
+    float: left;
+    margin: 10px auto auto 0px;
+  
+    /* Visual */
+    background: #eee;
+  }
 }
+
