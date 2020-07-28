@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Conditional Demo</title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+
+    var eatSteak = confirm("Do you like to eat steak?");
+    var likeDrink = confirm("would you like a drink?")
+    
+
+    if(eatSteak){
+        alert("You have good taste buds and like steak");
+    }
+    else{
+        alert("Since you dont like steak, here is a Tofu Stir-Fry! for you");
+    }
+
+    if(likeDrink){
+        var userAge = prompt("How old are you?");
+        if(userAge < 21){
+                            alert("sorry you are only " + userAge + ", no sake for you :(");
+                            alert("but here is an ice cold coke for you :)");
+        }
+    }  
+    else{
+        alert("Your steak would have tasted better with a drink");
+    }
+           
+    </script>
+
+    </body>
+</html>
