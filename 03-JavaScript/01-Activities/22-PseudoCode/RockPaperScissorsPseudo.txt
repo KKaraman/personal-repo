@@ -1,0 +1,18 @@
+* There are 3 choices ; rock, paper, scissors
+
+* Get random choice from computer
+
+- for i<5, then repeat the steps below
+
+    * Prompt the user's choice
+
+    * check to see who won
+        # if user chooses Rock and computer chooses scissors, the user wins
+        # if user chooses scissors and computer chooses paper, the user wins
+        # if user chooses paper and computer chooses rock, the user wins
+        # if user and computer choose the same thing, there is a draw
+
+    * repeat the game 5 times
+
+    * keep score
+

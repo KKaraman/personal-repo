@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Another Loop</title>
+  </head>
+  <body>
+
+    <h1>Open the console to see the magic!</h1>
+
+    <script>
+
+    var play= confirm("do you want to play Rock, Paper, Scissors");
+
+    if(play){    
+            var userWins = 0;
+            var compWins = 0;
+                      
+        for(var i=0; i < 5; i++){
+
+            var game = ["rock", "paper", "scissors"]
+
+            var num= Math.floor((Math.random() * 3));
+            var compSelect = game[num];
+            console.log("computer picked " + game[num])
+            var userInput = prompt("Pick rock, paper or scissors");
+            userInput = userInput.toLowerCase();
+            
+
+            if(userInput === "rock" && compSelect === "scissors"){
+                userWins++;
+                alert("User won this round");
+                alert("the user currently has " + userWins + " wins.")
+            }else if(userInput === "rock" && compSelect === "paper"){
+                compWins++;
+                alert("Computer won this round");
+                alert("the computer currently has " + compWins + " wins.")
+            }else if (userInput === "rock" && compSelect === "rock"){
+                alert("Nobody won this round")
+            }
+
+            if(userInput === "paper" && compSelect === "rock"){
+                userWins++;
+                alert("User won this round");
+                alert("the user currently has " + userWins + " wins.")
+            }else if(userInput === "paper" && compSelect === "scissors"){
+                compWins++;
+                alert("Computer won this round");
+                alert("the computer currently has " + compWins + " wins.")
+            }else if (userInput === "paper" && compSelect === "paper"){ 
+                alert("Nobody won this round")
+            }
+
+            if(userInput === "scissors" && compSelect === "paper"){
+                userWins++;
+                alert("User won this round");
+                alert("the user currently has " + userWins + " wins.")
+            }else if(userInput === "scissors" && compSelect === "rock"){
+                compWins++;
+                alert("Computer won this round");
+                alert("the computer currently has " + compWins + " wins.")
+            }else if (userInput === "scissors" && compSelect === "scissors"){
+                alert("Nobody won this round")
+            }
+
+            console.log("user has " + userWins + " wins and the computer has " + compWins + " wins.")
+
+            // console.log("round "+ i);
+            if(i < 4){
+            alert("lets play the next round");
+            }else{
+                alert("that is the end of the game");
+            }
+        }
+
+        if (userWins > compWins){
+            alert("the user beat the computer by a score of " + userWins +" to " + compWins);
+        } else if (compWins > userWins){
+            alert("the computer beat the user by a score of " + compWins + " to " + userWins);
+        }
+        else{ 
+            alert("the game has ended in a tie.")
+        }        
+}else{
+        alert("you are very boring");
+    }
+
+ alert("To play again, please refresh this page");
+    </script>
+</body>
+
+</html>
+

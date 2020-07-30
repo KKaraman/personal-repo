@@ -15,11 +15,11 @@
       var userGuess = prompt("Which band or artist do you like?");
 
       // Converts the user's answer to lowercase.
-      var userGuessLower = userGuess.toLowerCase();
+      userGuess = userGuess.toLowerCase();
 
       // Now we check the myBands array to see if it contains the user's answer.
       // If the user's band is not in the array...
-      if (myBands.indexOf(userGuessLower) === -1) {
+      if (myBands.indexOf(userGuess) === -1) {
         alert("Nah! They're pretty lame...");
       }
       // If it is in the array...

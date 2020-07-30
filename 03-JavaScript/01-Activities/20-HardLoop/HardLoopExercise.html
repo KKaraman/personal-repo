@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Another Loop</title>
+  </head>
+  <body>
+
+    <h1>Open the console to see the magic!</h1>
+
+    <script>
+
+        var myFarm = ["chickens", "pigs", "cows", "horses", "ostriches"]
+        
+        for(var i=0; i < myFarm.length; i++){
+            console.log("Farm animals are " + myFarm[i]);
+            animal = myFarm[i];
+            firstLetter = animal[0];
+
+            for(x=0; x< animal.length; x++){
+                console.log(animal[x]); //this is the same command as console.log(animal.charAt(x));
+                // console.log(animal.charAt(x));
+            }
+            // console.log(firstLetter)
+            if(firstLetter==="c"){
+                console.log(animal + " begins with a c.");
+            }else if(firstLetter==="o"){
+                console.log(animal + " begins with an o.");
+            }
+            else{
+                console.log(animal + " does not start with a c or o");
+            }
+        }
+    
+    </script>
+</body>
+
+</html>
+
