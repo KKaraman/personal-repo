@@ -9,10 +9,15 @@
     <script>
 
       var car = {
+        //this defines the make property of the car
         make: "Honda",
+        //this defines the model property of the car
         model: "Fit",
+        //this defines the color property of the car
         color: "Blue Raspberry",
+        //this defines the current propert of the car
         mileage: 3000,
+        //this defines 
         isWorking: true,
 
         driveToWork: function() {
@@ -48,19 +53,31 @@
 
 
       // How would we log...
-
+      
       // The car's make?
-
+      alert("My car is a " + car.make + ".");
+      console.log(car["make"]);
       // The car's model?
-
+      alert("My car is a " + car.make + " " + car.model + ".");
       // The car's mileage?
-
+      alert("My " + car.make + "'s mileage is " + car.mileage + ".");
       // How would we run the car's driveToWork method?
-
+      car.driveToWork();
       // How would we run the car's driveAroundWorld method?
-
+      car.driveAroundWorld();
       // How would we run the getTuneUp method?
+      car.getTuneUp();
+      car.honk();
 
+      console.log(Object.keys(car));
+
+      //prints out all the properties and definitions to console
+      for (var property in car){
+        console.log(`${property}:${car[property]}`);
+      }
+
+     
+     
     </script>
     
   </body>

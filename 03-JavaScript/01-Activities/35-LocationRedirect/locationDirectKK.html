@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+
+    console.log(navigator);
+
+    if(navigator.platform==="Win32"){
+        console.log("Welcome Windows user.");
+    }else{
+        console.log("welcome Mac user.");
+    }
+
+    //getLatLon gets run automatically when the user clicks allow on alert
+    navigator.geolocation.getCurrentPosition(getLatLon);
+
+    console.log(navigator.geolocation.getCurrentPosition);
+
+    function getLatLon(position) {
+            var latitude = position.coords.latitude;
+            var longitude = position.coords.longitude;
+            // var longitude = -100;
+            console.log("Latitude is "+latitude);
+            console.log("Longitude is "+longitude);
+            if(longitude > - 98.35){
+                console.log("you will be directed to Google");
+            }else{
+                console.log("you will be directed to yahoo.");
+            }
+    }
+
+</script>
+    
+</body>
+</html>
